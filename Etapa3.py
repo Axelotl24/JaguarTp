@@ -29,7 +29,7 @@ def palabras_candidatas(Diccionario,Longitud = None):
 def elegir_palabra_aleatoria(Diccionario, longitud):
     """
     Recibe un Diccionario y una longitud, devuelve una clave aleatoria de la misma longitud
-    Firma: Abigail
+    Firma: Abigail y Axel
     """
     palabra=random.choice(palabras_candidatas(Diccionario,longitud))
     return palabra
