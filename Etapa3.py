@@ -10,7 +10,6 @@ def pedir_longitud():
     """
     LONGITUD_MAXIMA = 15
     LONGITUD_MINIMA = parametros["LONG_PALABRA_MIN"]
-
     Ingreso = input("Presione la tecla S si desea establecer una longitud determinada para la palabra: ")
     if Ingreso.lower() == "s":
         Longitud = input("Ingrese la longitud que desea (mínimo 5 y máximo 15, o será al azar): ")
@@ -19,11 +18,9 @@ def pedir_longitud():
         Longitud = int(Longitud)
         if Longitud < LONGITUD_MINIMA or Longitud > LONGITUD_MAXIMA:
             Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
-
     else:
         Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
     return Longitud
-
 
 def palabras_candidatas(Diccionario, Longitud):
     """
@@ -34,13 +31,10 @@ def palabras_candidatas(Diccionario, Longitud):
     """ 
     Lista = list(Diccionario)
     ListaLongitud = []
-
     for Palabra in Lista:
         if Longitud == len(Palabra):
             ListaLongitud += [Palabra]
-
     Lista = ListaLongitud
-
     return Lista
 
 def elegir_palabra_aleatoria(Diccionario, longitud = None):
@@ -64,4 +58,4 @@ def palabra_a_adivinar(jugadores, DiccionarioPalabras, LongitudPalabra):
         while palabra in lista_usadas:
             palabra = elegir_palabra_aleatoria(DiccionarioPalabras, LongitudPalabra)
         lista_usadas+=[palabra]
-    return palabra 
+    return palabra
