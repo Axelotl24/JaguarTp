@@ -19,9 +19,8 @@ def pedir_longitud():
         Longitud = int(Longitud)
         if Longitud < LONGITUD_MINIMA or Longitud > LONGITUD_MAXIMA:
             Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
-
     else:
-        Longitud = Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
+        Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
     return Longitud
 
 
@@ -51,5 +50,4 @@ def elegir_palabra_aleatoria(Diccionario, longitud = None):
     """
     palabra = random.choice(palabras_candidatas(Diccionario,longitud))
     return palabra
-
 
